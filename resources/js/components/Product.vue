@@ -29,6 +29,7 @@
                     
             }
         },
+        // Get resouce product when page is loaded
         created() {
             const axios = require('axios');
             axios.get(this.productsPath + '/' + this.$route.params.id)

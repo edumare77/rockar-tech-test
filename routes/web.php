@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/customers/search', [App\Http\Controllers\CustomerController::class, 'search'])->name('customers.search');
+Route::get('/customers/{customer}', [App\Http\Controllers\CustomerController::class, 'show'])->name('customers.show');
+
+Route::get('/products/search', [App\Http\Controllers\ProductController::class, 'search'])->name('products.search');
+Route::get('/products/{product}', [App\Http\Controllers\ProductController::class, 'show'])->name('products.show');
+
